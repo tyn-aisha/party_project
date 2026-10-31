@@ -1,9 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="utf-8"><title>Assignment 6</title></head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assignment 6 - jQuery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Special+Elite&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    html { min-height: 100%; background: #120e0c; }
+    body {
+      margin: 0; min-height: 100vh; padding: 48px 20px 32px;
+      background: radial-gradient(circle at 50% -10%, #3a2a20 0, #120e0c 65%) #120e0c;
+      color: #e8dcc0; font: 15px/1.5 'Special Elite', 'Courier New', monospace;
+    }
+    header { text-align: center; max-width: 760px; margin: 0 auto 40px; }
+    h1 { margin: 0 0 8px; color: #c9a24b; letter-spacing: 3px;
+         font: 900 clamp(28px, 6vw, 46px) 'Playfair Display', Georgia, serif; }
+    .sub { margin: 0; opacity: .75; }
+    .rule { width: 120px; height: 3px; margin: 18px auto 0; background: #c9a24b; }
+
+    .files { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+             gap: 28px; max-width: 860px; margin: 0 auto; }
+    .file { position: relative; display: block; padding: 34px 24px 24px; text-decoration: none;
+            color: #2a1c10; border: 3px solid #5a4020; box-shadow: 0 18px 40px #000;
+            background:
+              radial-gradient(circle at 18% 12%, #00000012 0 10%, transparent 11%),
+              radial-gradient(circle at 82% 78%, #5a40201f 0 14%, transparent 15%),
+              repeating-linear-gradient(0deg, #d9c9a0 0 3px, #d3c196 3px 6px); }
+    .file:hover { background: repeating-linear-gradient(0deg, #e6d6ac 0 3px, #dfcda2 3px 6px); border-color: #c9a24b; }
+    .file:focus-visible { outline: 3px solid #ffd45a; outline-offset: 3px; }
+    .tab { position: absolute; left: 18px; top: -16px; padding: 3px 14px; background: #5a4020;
+           color: #e8dcc0; border: 3px solid #5a4020; font-size: 13px; }
+    .file h2 { margin: 0 0 8px; font: 900 24px 'Playfair Display', Georgia, serif; }
+    .file p { margin: 0 0 14px; }
+    .file ul { margin: 0 0 18px; padding-left: 18px; font-size: 13px; }
+    .open { display: inline-block; padding: 6px 12px; background: #3b2b20; color: #e8dcc0; border: 1px solid #6b5326; }
+    .stamp { position: absolute; right: 16px; top: 14px; padding: 2px 8px; font-size: 12px;
+             color: #8a2a22; border: 2px solid #8a2a22; transform: rotate(6deg); }
+
+    footer { max-width: 860px; margin: 44px auto 0; padding-top: 16px; border-top: 1px solid #6b5326;
+             text-align: center; font-size: 13px; opacity: .85; }
+    footer a { color: #c9a24b; }
+  </style>
+</head>
 <body>
-  <h1>Assignment 6. jQuery</h1>
-  <p><a href="task1/">Task 1. Selector Detective</a></p>
-  <p><a href="task2/">Task 2. The party in motion</a></p>
+  <header>
+    <h1>The Case of the Missing Cake</h1>
+    <p class="sub">Assignment 6. jQuery: selectors, effects and animations</p>
+    <div class="rule"></div>
+  </header>
+
+  <main class="files">
+    <a class="file" href="task1/">
+      <span class="tab">Case file 1</span>
+      <span class="stamp">20 cases</span>
+      <h2>Selector Detective</h2>
+      <p>Rebuild the party from an array and find the thief with one jQuery chain per case.</p>
+      <ul>
+        <li>Selectors and traversal</li>
+        <li>Highlight and jump with animate()</li>
+        <li>fadeIn() and fadeOut() for guests</li>
+      </ul>
+      <span class="open">Open the case</span>
+    </a>
+
+    <a class="file" href="task2/">
+      <span class="tab">Case file 2</span>
+      <span class="stamp">interactive</span>
+      <h2>The party in motion</h2>
+      <p>The same party, now alive: spotlight, guest cards, flying moves and sorting by time.</p>
+      <ul>
+        <li>Spotlight with fadeTo() and Clear</li>
+        <li>Guest card grows from the avatar</li>
+        <li>Move and Sort by time</li>
+      </ul>
+      <span class="open">Open the case</span>
+    </a>
+  </main>
+
+  <footer>
+    Source code: <a href="https://github.com/tyn-aisha/party_project">github.com/tyn-aisha/party_project</a>
+  </footer>
 </body>
 </html>
